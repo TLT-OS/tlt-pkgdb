@@ -1,5 +1,5 @@
 #!/bin/bash
-repo=liya-pkgdb
+repo=tlt-pkgdb
 rm -rf *.files
 rm -rf *.db
 repo-add $repo.db.tar.gz *.pkg.tar.zst
