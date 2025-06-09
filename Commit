@@ -1,0 +1,12 @@
+#!/bin/bash
+repo=liya-pkgdb
+rm -rf *.files
+rm -rf *.db
+repo-add $repo.db.tar.gz *.pkg.tar.zst
+mv $repo.db.tar.gz $repo.db
+mv $repo.files.tar.gz $repo.files
+git add .
+echo "## Write The Commit ##"
+read commit
+git commit -m "$commit"
+git push
